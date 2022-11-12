@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+:root {
+    --blue: #0000ff;
+    --white: #FFF;
+    --blue-skies-background: linear-gradient(to right, #56CCF2, #2F80ED);
+    --red: #ff0000;
+    --orange: #ffa500;
+    --black: #000;
+    --gray: #878686;
+    --gray-background: #dfdddd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 100vh;
+    position: relative;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+body::-webkit-scrollbar-thumb {
+    background-color: #acabab;
+    border-radius: 1rem;
+}
+
+
+body::-webkit-scrollbar-track {
+    background-color: #f8f8f8;
+}
+
+
+
+.container {
+    position: relative;
+    min-height: 100vh;
+}
+
+.menu {
+    height: 100%;
+    background-color: #323236;
+    color: #FFF;
+    width: 0;
+    right: 0;
+    z-index: 1;
+    position: absolute;
+    transition: 0.5s;
+    overflow: hidden;
+    top: 0;
+}
+
+.menu.open {
+    width: 50%;
+}
+
+.mobile-buttons {
+    padding: 10px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.mobile-buttons button {
+    margin: 6px 0;
+    width: 100% !important;
+}
+
+
+.header {
+    background: var(--blue-skies-background);
+    color: var(--white);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hamburger-icon {
+    cursor: pointer;
+    font-size: 2em;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+
+.main {
+    min-height: 100vh;
+}
+
+.blur {
+    filter: blur(2px);
+}
+
+
+.user-informations,
+.read-books {
+    padding: 10px;
+}
+
+.user-informations p {
+    margin-top: 10px;
+}
+
+#secondary-title,
+.book {
+    margin-bottom: 10px;
+}
+
+#search-form {
+    max-width: 250px;
+    padding: 10px;
+}
+
+
+.container-search-input {
+    position: relative;
+}
+
+
+#search-icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+#search-input {
+    width: 100%;
+    padding: 4px 25px 4px 4px;
+    border-radius: 2px;
+    border: 1px solid var(--gray);
+    transition: 0.5s;
+    outline: none;
+}
+
+#search-input:focus {
+    border-color: var(--blue);
+}
+
+
+
+.popup {
+    background-color: var(--gray-background);
+    max-width: 350px;
+    min-width: 250px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    top: -500px;
+    transform: translateX(-50%);
+    border-radius: 6px;
+    transition: 1s;
+    opacity: 0;
+    z-index: 1;
+}
+
+
+.popup h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.visible {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+
+.close-icon .material-symbols-outlined {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 1.8em;
+}
+
+
+
+.input {
+    width: 100%;
+    padding: 4px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    transition: 0.5s;
+    outline: none;
+    border-radius: 2px;
+}
+
+.input:focus {
+    border-color: var(--blue);
+}
+
+
+
+.header-btn {
+    width: 100px;
+}
+
+#add-book-header-btn {
+    width: 150px;
+}
+
+
+.add-btn {
+    background: linear-gradient(45deg, darkviolet, #ff8989);
+    position: relative;
+    z-index: 1;
+}
+
+.add-btn::before {
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 4px;
+    background-image: linear-gradient(45deg, #8400bd, #ed8181);
+    transition: opacity 0.4s;
+    z-index: -1;
+}
+
+
+.add-btn:hover::before {
+    opacity: 1;
+}
+
+.edit-btn {
+    margin-left: 10px;
+    background: var(--orange);
+    transition: 0.5s;
+}
+
+
+.edit-btn:hover {
+    background-color: #f19c00;
+}
+
+
+.remove-btn {
+    background-color: var(--red);
+    transition: 0.5s;
+}
+
+.remove-btn:hover {
+    background-color: #ef0101;
+}
+
+#edit-book-pop-up-btn {
+    margin: 0 !important;
+}
+
+
+.button {
+    border: none;
+    height: 30px;
+    color: #FFF;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.full-width {
+    width: 100%;
+}
+
+
+.book-select {
+    outline: none;
+    cursor: pointer;
+    display: block;
+    margin: 10px 0;
+}
+
+#book-select-remove {
+    margin: 10px 0 15px 0;
+}
+
+
+
+@media (max-width: 650px) {
+    .mobile-menu {
+        display: block;
+    }
+
+    .buttons {
+        display: none;
+    }
+
+}

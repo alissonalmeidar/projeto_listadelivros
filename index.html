@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lista de Livros</title>
+    <link rel="shortcut icon" href="./assets/shortcut-icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" type="text/css" href="./style/style.css">
+    <script src="./script/script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="menu">
+            <div class="mobile-buttons">
+                <div class="close-icon">
+                    <i class="material-symbols-outlined">close</i>
+                </div>
+                <button id="add-book-header-btn" class="button add-btn" data-js="Add">Adicionar Livro</button>
+                <button class="edit-btn button header-btn" id="edit-book-header-btn" data-js="Edit">Editar</button>
+                <button id="remove-header-btn" class="button header-btn remove-btn" data-js="Remove">Remover</button>
+            </div>
+        </div>
+
+
+        <header class="header">
+            <h1>Lista de livros</h1>
+
+            <nav class="navigation">
+                <div class="buttons">
+                    <button id="add-book-header-btn" class="add-btn button" data-js="Add">Adicionar Livro</button>
+                    <button class="edit-btn button header-btn" id="edit-book-header-btn" data-js="Edit">Editar</button>
+                    <button id="remove-header-btn" class="button header-btn remove-btn" data-js="Remove">Remover</button>
+                </div>
+            </nav>
+
+            <div class="mobile-menu">
+                <i class="material-symbols-outlined hamburger-icon">menu</i>
+            </div>
+        </header>
+
+        <main class="main">
+
+
+            <div class="user-informations">
+                <h2>Minhas informações</h2>
+                <p id="user-informations-text"></p>
+            </div>
+
+
+            <section class="search-book-information">
+                <form id="search-form" class="form">
+                    <div class="container-search-input">
+                        <input type="text" name="pesquisa" placeholder="Pesquisar livro" id="search-input" autocomplete="off">
+                        <i class="material-symbols-outlined" id="search-icon">search</i>
+                    </div>
+                </form>
+            </section>
+
+
+            <div class="read-books">
+                <h2 id="secondary-title">Livros lidos:</h2>
+                <div class="read-books-container">
+                </div>
+            </div>
+
+
+
+        </main>
+
+    </div>
+    </div>
+
+
+    <div class="add-book popup">
+        <div class="close-icon">
+            <i class="material-symbols-outlined add">close</i>
+        </div>
+
+
+
+        <h2>Adicionar livro</h2>
+        <div class="add-book">
+            <form action="#" class="form">
+                <label for="book-input">Adicione o nome do livro</label>
+                <input type="text" name="bookinput" class="input" placeholder="Digite aqui o nome do livro" id="book-input">
+                <label for="pages-input">Quantidade de páginas do livro</label>
+                <input type="number" name="pagesinput" id="pages-input" class="input" placeholder="Digite a quantidade de páginas">
+                <button id="add-book-pop-up-btn" class="button add-btn full-width">Adicionar livro</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="edit-book popup">
+        <div class="close-icon">
+            <i class="material-symbols-outlined edit">close</i>
+        </div>
+        <h2>Editar livro</h2>
+        <div class="edit-book">
+            <form action="#" class="form">
+                <label for="book-input-edit">Selecione o livro</label>
+                <select id="book-select" class="book-select">
+                </select>
+                <label for="edit-name-input">Digite novo nome do livro </label>
+                <input type="text" name="edit-input" id="edit-name-input" class="input" placeholder="Digite o novo nome do livro">
+                <label for="pages-input">Nova quantidade de páginas do livro</label>
+                <input type="number" name="pagesinput" id="edit-pages-input" class="input" placeholder="Digite a quantidade de páginas">
+                <button id="edit-book-pop-up-btn" class="button edit-btn full-width">Editar livro</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="remove-book popup">
+        <div class="close-icon">
+            <i class="material-symbols-outlined remove">close</i>
+        </div>
+        <h2>Remover livro</h2>
+        <div class="remove-book">
+            <form action="#" class="form">
+                <label for="book-input-remove">Selecione o livro</label>
+                <select id="book-select-remove" class="book-select">
+                </select>
+                <button id="remove-book-btn" class="button remove-btn full-width">Remover livro</button>
+            </form>
+        </div>
+    </div>
+    </div>
+
+
+    <div class="delete-all popup"> 
+        <h2>Deseja Remover todos os livros?</h2>
+        <button id="remove-all-btn" class="button remove-btn full-width">Remover todos</button>
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>
